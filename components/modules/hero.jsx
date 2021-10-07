@@ -18,7 +18,7 @@ export default Hero;
 
 
 const Container = styled.div`
-    height: 100vh;
+    height: 92vh;
     display: flex;
     background-image: linear-gradient(
         rgba(57, 121, 191, 0.45), 
@@ -33,6 +33,7 @@ const Container = styled.div`
     clip-path: ellipse(100% 55% at 48% 44%);
     @media (max-width: 788px) {
         gap: 22px;
+        height: 92vh;
       }
 `
 
