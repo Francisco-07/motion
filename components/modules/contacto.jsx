@@ -64,7 +64,7 @@ const FormContainer = styled.div`
   transform: translate(-50%, -50%);
   background-color: #1B4C80;
   @media (max-width: 788px) {
-    width: 70vw;
+    width: 80vw;
     height: 70vh;
   }
 `
