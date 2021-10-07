@@ -4,16 +4,16 @@ function Contacto() {
       <form name="contact" method="POST" data-netlify="true" action="/">
         <input type="hidden" name="form-name" value="contact" />
         <div>
-            <input type="text" name="firstname" id="firstname" placeholder="Nombre" />
+            <input type="text" name="Nombre" placeholder="Nombre" />
         </div>
         <div>
-            <input type="text" name="lastname" id="lastname" placeholder="Apellido" />
+            <input type="text" name="Apellido" placeholder="Apellido" />
         </div>
         <div>
-            <input type="email" name="email" id="youremail" placeholder="Email" />
+            <input type="email" name="email" placeholder="Email" />
         </div>
         <div>
-            <textarea name="message" id="yourmessage" placeholder="Mensaje"></textarea>
+            <textarea name="Mensaje" placeholder="Mensaje"></textarea>
         </div>
         <div>
             <button type="submit">Enviar</button>
