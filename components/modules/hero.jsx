@@ -63,10 +63,8 @@ const HeroSub = styled.h2`
     margin-bottom: 0px;
     margin-top: 0px;
     margin-left: 45px;
-    @media (max-width: 900px) {
-        font-size: 25px;
-    }
     @media (max-width: 750px) {
         font-size: 25px;
+        margin-left: 0px;
     }
 `
