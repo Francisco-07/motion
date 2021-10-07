@@ -3,7 +3,7 @@ import Hero from "../modules/hero";
 import Servicios from "../modules/servicios";
 import About from "../modules/about";
 import Footer from "../modules/footer";
-
+import Contacto from "../modules/contacto";
 function IndexLayout() {
     return(
         <>
@@ -12,6 +12,7 @@ function IndexLayout() {
         <About/>
         <Servicios/>
         <Footer/>
+        <Contacto/>
         </>
     )
 }
