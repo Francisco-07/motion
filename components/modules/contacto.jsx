@@ -3,28 +3,21 @@ function Contacto() {
     return (
       <form name="contact" method="POST" data-netlify="true" action="/">
         <input type="hidden" name="form-name" value="contact" />
-        <p>
-  <input type="text" name="firstname" id="firstname" />
-          <label htmlFor="yourname">
-            Your Name:
-          </label> <br />
-          <input type="text" name="name" id="yourname" />
-        </p>
-        <p>
-          <label htmlFor="youremail">
-            Your Email:
-          </label> <br />
-          <input type="email" name="email" id="youremail" />
-        </p>
-        <p>
-          <label htmlFor="yourmessage">
-            Message:
-          </label> <br />
-          <textarea name="message" id="yourmessage"></textarea>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <div>
+            <input type="text" name="firstname" id="firstname" placeholder="Nombre" />
+        </div>
+        <div>
+            <input type="text" name="lastname" id="lastname" placeholder="Apellido" />
+        </div>
+        <div>
+            <input type="email" name="email" id="youremail" placeholder="Email" />
+        </div>
+        <div>
+            <textarea name="message" id="yourmessage" placeholder="Mensaje"></textarea>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
       </form>
     )
   }
