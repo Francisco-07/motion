@@ -56,7 +56,6 @@ const Nav = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  height: 96px;
   @media (max-width: 788px) {
     border-radius: 0;
     position: fixed;
