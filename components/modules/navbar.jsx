@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
     <Nav>
       <Logo>
-      <Link href="/"><h1>BINMOTION</h1></Link>
+      <Link href="/"><h1>BM</h1></Link>
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
       {isOpen ? (
@@ -48,7 +48,7 @@ export default Navbar;
 
 const Nav = styled.div`
   display: flex;
-  background: #1B4C80;
+  position: absolute;
   justify-content: space-between;
   z-index:999;
   align-items: center;
@@ -60,6 +60,7 @@ const Nav = styled.div`
   @media (max-width: 788px) {
     border-radius: 0;
     position: fixed;
+    background: transparent;
   }
 `;
 
@@ -81,6 +82,9 @@ const Logo = styled.div`
       color: #FF5100;
     }
   }
+  @media (max-width: 750px) {
+    font-size: 18px;
+}
 `;
 
 const Menu = styled.div`

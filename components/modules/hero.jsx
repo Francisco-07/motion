@@ -33,7 +33,6 @@ const Container = styled.div`
     clip-path: ellipse(100% 55% at 48% 44%);
     @media (max-width: 788px) {
         gap: 22px;
-        margin-top: 96px;
       }
 `
 
@@ -41,11 +40,14 @@ const HeroTitle = styled.h1`
     text-align:center;
     color: #fff;
     font-size: 100px;
-    margin-top: 40px;
+    margin-top: 130px;
     margin-bottom: 20px;
     margin-left: 45px;
     @media (max-width: 900px) {
         font-size: 60px;
+    }
+    @media (max-width: 750px) {
+        font-size: 37px;
     }
 `
 const HeroSub = styled.h2`
@@ -58,5 +60,8 @@ const HeroSub = styled.h2`
     margin-left: 45px;
     @media (max-width: 900px) {
         font-size: 25px;
+    }
+    @media (max-width: 750px) {
+        font-size: 17px;
     }
 `
