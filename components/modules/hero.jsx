@@ -34,6 +34,8 @@ const Container = styled.div`
     @media (max-width: 788px) {
         gap: 22px;
         height: 92vh;
+        align-items:center;
+        justify-content: center;
       }
 `
 
@@ -48,7 +50,9 @@ const HeroTitle = styled.h1`
         font-size: 60px;
     }
     @media (max-width: 750px) {
-        font-size: 37px;
+        font-size: 42px;
+        margin-top: 30px;
+        margin-left: 0px;
     }
 `
 const HeroSub = styled.h2`
@@ -63,6 +67,6 @@ const HeroSub = styled.h2`
         font-size: 25px;
     }
     @media (max-width: 750px) {
-        font-size: 17px;
+        font-size: 25px;
     }
 `

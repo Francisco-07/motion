@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import { FaInstagramSquare } from 'react-icons/fa'; 
 import { FaTwitterSquare } from 'react-icons/fa'; 
 import { FaFacebookSquare } from 'react-icons/fa'; 
-import { MdKeyboardArrowRight } from 'react-icons/md';
-
+import { MdKeyboardArrowRight } from 'react-icons/md'; 
+import { GrMail } from 'react-icons/gr'; 
+import React, { useState } from "react";
+import Contacto from './contacto';
 
 
 function Footer() {
+    const [show, setShow] = useState(false);
     return(
         <>
         <FooterContainer>
@@ -16,12 +19,16 @@ function Footer() {
                 <FooterTitle>MOTION</FooterTitle>
             </FooterBrand>
             <FooterContact>
-                <FooterTitle>CONTACTO</FooterTitle>
+                <FooterTitle>REDES SOCIALES</FooterTitle>
                 <RedesIcons>
                 <FaInstagramSquare/>
                 <FaFacebookSquare/>
                 <FaTwitterSquare/>
                 </RedesIcons>
+                <MailContact>
+                <FooterTitle>CONTACTO</FooterTitle>
+                <Mail onClick={() => setShow(!show)}/>
+                </MailContact>
             </FooterContact>
             <FooterServicios>
                 <FooterTitle>SERVICIOS</FooterTitle>
@@ -31,6 +38,7 @@ function Footer() {
             </FooterServicios>
         </FooterContainer>
         <Author id="Contacto">Desarrollo<a target="_blank" rel="noreferrer" href="https://github.com/Francisco-07"> <MdKeyboardArrowRight/> Francisco Garciarena</a></Author>
+        <Contacto show={show} setShow={setShow}/>
         </>
     )
 }
@@ -38,6 +46,15 @@ function Footer() {
 
 
 export default Footer;
+
+const Mail = styled(GrMail)`
+  color: white;
+  font-size: 35px;
+  opacity: 0.5;
+  & :hover {
+    opacity: 1;
+}
+`
 
 const FooterContainer = styled.div`
     margin-top: 40px;
@@ -91,8 +108,20 @@ const RedesIcons = styled.div`
     & svg {
         font-size: 40px;
         color: white;
+        opacity: 0.5;
+        & :hover {
+            opacity: 1;
+        }
     }
 `
+const MailContact = styled.div`
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`
+
 
 const Author = styled.p`
     padding:20px;
@@ -107,7 +136,7 @@ const Author = styled.p`
         display: flex;
         color: white;
         &:hover {
-            color: black;
+            color: #FF5100;
     }
     & svg {
         cursor: pointer;

@@ -56,16 +56,17 @@ const FormContainer = styled.div`
   justify-content: center;
   align-items: center;
   display: ${({ show }) => (show ? "flex" : "none")};
+  transition:  0.5s ease-in-out;
   position: fixed;
-  width: 50vw;
-  height: 80vh;
   top: 50%;
   left: 50%;
+  padding: 100px;
+  border-radius: 10px;
   transform: translate(-50%, -50%);
-  background-color: #1B4C80;
+  background: rgb(255,81,0);
+  background: linear-gradient(180deg, rgba(255,81,0,1) 0%, rgba(255,185,64,1) 100%);
   @media (max-width: 788px) {
-    width: 80vw;
-    height: 70vh;
+    padding: 50px;
   }
 `
 
