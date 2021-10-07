@@ -3,15 +3,19 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from 'react-icons/gi'; 
 import { ImCross } from 'react-icons/im'; 
+import { GrMail } from 'react-icons/gr'; 
 import { IconContext } from "react-icons";
 // next 
 import Link from 'next/link'
+// component
+import Contacto from "./contacto";
 
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+  const [show, setShow] = useState(false);
+ 
   return (
     <>
     <Nav>
@@ -31,10 +35,11 @@ const Navbar = () => {
           ) }
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <Link href="/" activeClassName="active" activeStyle={{fontWeight: "bold"}}>SERVICIOS</Link>
-        <Link href="/"><a onClick={() => setIsOpen(!isOpen)}>CONTACTO</a></Link>
+        <Link href="/">SERVICIOS</Link>
         <Link href="/">SOBRE NOSOTROS</Link>
+        <Mail onClick={() => {setShow(!show); setIsOpen(false)}}/>
       </Menu>
+      <Contacto show={show} setShow={setShow}/>
     </Nav>
     </>
   );
@@ -44,7 +49,14 @@ const Navbar = () => {
 export default Navbar;
 
 
-
+const Mail = styled(GrMail)`
+  color: white;
+  font-size: 25px;
+  margin-right:25px;
+  @media (max-width: 788px) {
+    margin-right:0px;
+  }
+`
 
 const Nav = styled.div`
   display: flex;
