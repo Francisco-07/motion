@@ -55,7 +55,9 @@ const FormContainer = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
-  display: ${({ show }) => (show ? "flex" : "none")};
+  display: flex;
+  visibility: ${({ show }) => (show ? "visible" : "hidden")};
+  opacity: ${({ show }) => (show ? "1" : "0")};
   transition:  0.5s ease-in-out;
   position: fixed;
   top: 50%;
