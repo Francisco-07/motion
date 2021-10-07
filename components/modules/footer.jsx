@@ -40,6 +40,7 @@ function Footer() {
 export default Footer;
 
 const FooterContainer = styled.div`
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
     background-color: #1B4C80;
