@@ -1,26 +1,31 @@
 
-
 function Contacto() {
-  return (
-    <form name="contact" method="post">
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label htmlFor="name">Name</label> <br />
-        <input type="text" id="name" name="name" required />
-      </p>
-      <p>
-        <label htmlFor="email">Email</label> <br />
-        <input type="email" id="email" name="email" required />
-      </p>
-      <p>
-        <label htmlFor="message">Message</label> <br />
-        <textarea id="message" name="message" required></textarea>
-      </p>
-      <p>
-        <input type="submit" value="Submit message" />
-      </p>
-    </form>
-  );
-}
-
+    return (
+      <form name="contact" method="POST" data-netlify="true" action="/">
+        <input type="hidden" name="form-name" value="contact" />
+        <p>
+  <input type="text" name="firstname" id="firstname" />
+          <label htmlFor="yourname">
+            Your Name:
+          </label> <br />
+          <input type="text" name="name" id="yourname" />
+        </p>
+        <p>
+          <label htmlFor="youremail">
+            Your Email:
+          </label> <br />
+          <input type="email" name="email" id="youremail" />
+        </p>
+        <p>
+          <label htmlFor="yourmessage">
+            Message:
+          </label> <br />
+          <textarea name="message" id="yourmessage"></textarea>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    )
+  }
 export default Contacto;
