@@ -7,7 +7,7 @@ import { IconContext } from "react-icons";
 // next 
 import Link from 'next/link'
 // component
-
+import { Fade } from "react-awesome-reveal";
 
 
 const Navbar = () => {
@@ -32,9 +32,11 @@ const Navbar = () => {
           ) }
       </Hamburger>
       <Menu isOpen={isOpen}>
+        <Fade triggerOnce cascade>
         <Link href="/">SERVICIOS</Link>
         <Link href="/">CONTACTO</Link>
         <Link href="/">SOBRE NOSOTROS</Link>
+        </Fade>
       </Menu>
     </Nav>
     </>

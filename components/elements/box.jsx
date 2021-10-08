@@ -13,7 +13,7 @@ function Box(props) {
 export default Box;
 
 const BoxContainer = styled.div`
-    width: 100%;
+    width: 32.6vw;
     height: 250px;
     background-image: linear-gradient(
         rgba(255, 81, 0, 0.45), 
@@ -30,6 +30,9 @@ const BoxContainer = styled.div`
             rgba(27, 76, 128, 0.5), 
             rgba(27, 76, 128, 0.5)
           ), url(${props => props.image});
+    }
+    @media (max-width: 900px) {
+        width: 100%;
     }
 `
 

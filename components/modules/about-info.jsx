@@ -4,11 +4,13 @@ import { RiFocus3Line } from 'react-icons/ri';
 import { GiChessKnight } from 'react-icons/gi'; 
 import { HiOutlineLightBulb } from 'react-icons/hi'; 
 import { FaUniversity } from 'react-icons/fa'; 
+import { Fade } from "react-awesome-reveal";
 
 function AboutInfo() {
     return(
         <>
         <InfoContainer>
+            <Fade triggerOnce delay={650}>
             <IconTextContainer>
             < RiFocus3Line/>
             <InfoTitle>100% ENFOCADOS</InfoTitle>
@@ -32,6 +34,7 @@ function AboutInfo() {
             <InfoTitle>CAPACITADOS</InfoTitle>
             <InfoText>Contamos con profesionales altamente calificados y con trayectoria para abordar cualquier proyecto.</InfoText>
             </IconTextContainer>
+            </Fade>
         </InfoContainer>
         </>
     )

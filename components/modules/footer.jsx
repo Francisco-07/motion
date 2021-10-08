@@ -7,7 +7,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 import { GrMail } from 'react-icons/gr'; 
 import React, { useState } from "react";
 import Contacto from './contacto';
-
+import { Fade } from "react-awesome-reveal";
 
 function Footer() {
     const [show, setShow] = useState(false);
@@ -15,9 +15,12 @@ function Footer() {
         <>
         <FooterContainer>
             <FooterBrand>
+                <Fade triggerOnce cascade delay={250}>
                 <FooterTitle>BIN</FooterTitle>
                 <FooterTitle>MOTION</FooterTitle>
+                </Fade>
             </FooterBrand>
+            <Fade triggerOnce cascade delay={250}>
             <FooterContact>
                 <FooterTitle>REDES SOCIALES</FooterTitle>
                 <RedesIcons>
@@ -36,8 +39,11 @@ function Footer() {
                 <FooterText>Marketing y publicidad</FooterText>
                 <FooterText>Diseño web</FooterText>
             </FooterServicios>
+            </Fade>
         </FooterContainer>
+        <Fade triggerOnce cascade delay={250}>
         <Author id="Contacto">Desarrollo<a target="_blank" rel="noreferrer" href="https://github.com/Francisco-07"> <MdKeyboardArrowRight/> Francisco Garciarena</a></Author>
+        </Fade>
         <Contacto show={show} setShow={setShow}/>
         </>
     )
@@ -57,7 +63,7 @@ const Mail = styled(GrMail)`
 `
 
 const FooterContainer = styled.div`
-    margin-top: 40px;
+    border-top: 2px solid white;
     display: flex;
     justify-content: space-around;
     background-color: #1B4C80;
@@ -130,11 +136,14 @@ const Author = styled.p`
     background-color: #1B4C80;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 0px;
     border-top: 2px solid white;
     & a {
         display: flex;
         color: white;
+        justify-content: center;
+    align-items: center;
         &:hover {
             color: #FF5100;
     }
