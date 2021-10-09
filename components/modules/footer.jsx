@@ -21,7 +21,7 @@ function Footer() {
                 </Fade>
             </FooterBrand>
             <Fade triggerOnce cascade delay={250}>
-            <FooterContact>
+            <FooterSection>
                 <FooterTitle>REDES SOCIALES</FooterTitle>
                 <RedesIcons>
                 <FaInstagramSquare/>
@@ -32,13 +32,13 @@ function Footer() {
                 <FooterTitle>CONTACTO</FooterTitle>
                 <Mail onClick={() => setShow(!show)}/>
                 </MailContact>
-            </FooterContact>
-            <FooterServicios>
+            </FooterSection>
+            <FooterSection>
                 <FooterTitle>SERVICIOS</FooterTitle>
                 <FooterText>Consultoria y gestion</FooterText>
                 <FooterText>Marketing y publicidad</FooterText>
                 <FooterText>Diseño web</FooterText>
-            </FooterServicios>
+            </FooterSection>
             </Fade>
         </FooterContainer>
         <Fade triggerOnce cascade delay={250}>
@@ -63,9 +63,9 @@ const Mail = styled(GrMail)`
 `
 
 const FooterContainer = styled.div`
-    border-top: 2px solid white;
     display: flex;
     justify-content: space-around;
+    border-top: 2px solid white;
     background-color: #1B4C80;
     @media (max-width: 750px) {
         flex-direction: column;
@@ -75,8 +75,8 @@ const FooterContainer = styled.div`
 const FooterBrand = styled.div`
     margin-top: 40px;
     & h2 {
-        font-size: 45px;
         text-align: start;
+        font-size: 45px;
         margin-bottom: 0;
         margin-top: 0;
     }
@@ -87,14 +87,8 @@ const FooterBrand = styled.div`
     }
 `
 
-const FooterContact = styled.div`
+const FooterSection = styled.div`
     @media (max-width: 750px) {
-        margin-top: 40px;
-    }
-`
-
-const FooterServicios = styled.div`
-     @media (max-width: 750px) {
         margin-top: 40px;
     }
 `
@@ -122,30 +116,31 @@ const RedesIcons = styled.div`
 `
 const MailContact = styled.div`
     display: flex;
-    margin-top: 25px;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
 `
 
 
 const Author = styled.p`
-    padding:20px;
-    color: white;
-    margin-bottom: 0;
-    background-color: #1B4C80;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    background-color: #1B4C80;
+    padding:20px;
+    margin-bottom: 0;
     margin-top: 0px;
     border-top: 2px solid white;
     & a {
         display: flex;
-        color: white;
         justify-content: center;
+        color: white;
+        opacity: 0.5;
     align-items: center;
         &:hover {
-            color: #FF5100;
+            opacity: 1;
     }
     & svg {
         cursor: pointer;

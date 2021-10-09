@@ -18,7 +18,6 @@ function Servicios() {
         <Box image={'/img/3.jpg'} text={"DISEÑO WEB"}/>
         </Slide>
         </Container>
-        
         </>
     )
 }
@@ -38,11 +37,11 @@ const Title = styled.h2`
 `
 
 const Container = styled.div`
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     @media (max-width: 900px) {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 `
 
