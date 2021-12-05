@@ -1,15 +1,15 @@
 // librerias
 import styled from 'styled-components';
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 function Hero() {
     return (
         <>
         <Container>
-            <Slide triggerOnce duration={600} cascade>
+            <Fade triggerOnce duration={600} cascade>
                 <HeroTitle>BINMOTION</HeroTitle>
                 <HeroSub>POTENCIAMOS TU NEGOCIO</HeroSub>
-            </Slide>
+            </Fade>
         </Container> 
         </>
         )

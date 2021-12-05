@@ -13,7 +13,7 @@ function Footer() {
     const [show, setShow] = useState(false);
     return(
         <>
-        <FooterContainer>
+        <Container>
             <FooterBrand>
                 <Fade triggerOnce cascade delay={250}>
                 <FooterTitle>BIN</FooterTitle>
@@ -40,7 +40,7 @@ function Footer() {
                 <FooterText>Diseño web</FooterText>
             </FooterSection>
             </Fade>
-        </FooterContainer>
+        </Container>
         <Fade triggerOnce cascade delay={250}>
         <Author id="Contacto">Desarrollo<a target="_blank" rel="noreferrer" href="https://github.com/Francisco-07"> <MdKeyboardArrowRight/> Francisco Garciarena</a></Author>
         </Fade>
@@ -62,7 +62,7 @@ const Mail = styled(GrMail)`
 }
 `
 
-const FooterContainer = styled.div`
+const Container = styled.div`
     display: flex;
     justify-content: space-around;
     border-top: 2px solid white;
